@@ -25,7 +25,13 @@ pipeline {
             steps {
                 bat "C:\\Windows\\System32\\cmd.exe /c docker login --username ankit2392001 --password Gagan@123!"
             }
+
         }
+	stage("Docker add tag"){
+            steps {
+                bat "C:\\Windows\\System32\\cmd.exe /c docker tag my-maven-docker-project.jar m0inak/my-maven-docker-project.jar:tag"
+            }
+        }
         stage("Push Image"){
             steps {
                 bat "C:\\Windows\\System32\\cmd.exe /c docker push m0inak/my-maven-docker-project.jar"
