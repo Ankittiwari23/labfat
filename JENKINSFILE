@@ -23,7 +23,7 @@ pipeline {
         }
         stage("Docker Login"){
             steps {
-                bat "C:\\Windows\\System32\\cmd.exe /c docker login --username m0inak --password Docker@moinak"
+                bat "C:\\Windows\\System32\\cmd.exe /c docker login --username ankit2392001 --password Gagan@123!"
             }
         }
         stage("Push Image"){
